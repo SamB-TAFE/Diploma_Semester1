@@ -1,0 +1,11 @@
+sudo apt update
+
+sudo apt install net-tools
+
+sudo apt install redis
+
+sudo nano /etc/redis/redis.conf
+- change ip to 0.0.0.0
+- change protection to no
+
+sudo service redis-server restart
