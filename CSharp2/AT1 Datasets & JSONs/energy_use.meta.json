@@ -1,0 +1,41 @@
+{
+  "file": "energy_use.bin",
+  "dataset_label": "Energy Consumption Monitor",
+  "rows": 7,
+  "cols": 24,
+  "row_labels": [
+    "Room 1",
+    "Room 2",
+    "Room 3",
+    "Room 4",
+    "Room 5",
+    "Room 6",
+    "Room 7"
+  ],
+  "col_labels": [
+    "Hour 00",
+    "Hour 01",
+    "Hour 02",
+    "Hour 03",
+    "Hour 04",
+    "Hour 05",
+    "Hour 06",
+    "Hour 07",
+    "Hour 08",
+    "Hour 09",
+    "Hour 10",
+    "Hour 11",
+    "Hour 12",
+    "Hour 13",
+    "Hour 14",
+    "Hour 15",
+    "Hour 16",
+    "Hour 17",
+    "Hour 18",
+    "Hour 19",
+    "Hour 20",
+    "Hour 21",
+    "Hour 22",
+    "Hour 23"
+  ]
+}

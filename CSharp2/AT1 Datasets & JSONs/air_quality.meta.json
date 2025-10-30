@@ -1,0 +1,38 @@
+{
+  "file": "air_quality.bin",
+  "dataset_label": "Air Quality Station Readings",
+  "rows": 24,
+  "cols": 4,
+  "row_labels": [
+    "Hour 00",
+    "Hour 01",
+    "Hour 02",
+    "Hour 03",
+    "Hour 04",
+    "Hour 05",
+    "Hour 06",
+    "Hour 07",
+    "Hour 08",
+    "Hour 09",
+    "Hour 10",
+    "Hour 11",
+    "Hour 12",
+    "Hour 13",
+    "Hour 14",
+    "Hour 15",
+    "Hour 16",
+    "Hour 17",
+    "Hour 18",
+    "Hour 19",
+    "Hour 20",
+    "Hour 21",
+    "Hour 22",
+    "Hour 23"
+  ],
+  "col_labels": [
+    "CO2",
+    "NO2",
+    "PM2.5",
+    "O3"
+  ]
+}
