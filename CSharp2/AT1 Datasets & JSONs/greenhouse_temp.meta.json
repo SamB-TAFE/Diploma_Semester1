@@ -1,0 +1,42 @@
+{
+  "file": "greenhouse_temp.bin",
+  "dataset_label": "Greenhouse Temperature Matrix",
+  "rows": 24,
+  "cols": 8,
+  "row_labels": [
+    "Hour 00",
+    "Hour 01",
+    "Hour 02",
+    "Hour 03",
+    "Hour 04",
+    "Hour 05",
+    "Hour 06",
+    "Hour 07",
+    "Hour 08",
+    "Hour 09",
+    "Hour 10",
+    "Hour 11",
+    "Hour 12",
+    "Hour 13",
+    "Hour 14",
+    "Hour 15",
+    "Hour 16",
+    "Hour 17",
+    "Hour 18",
+    "Hour 19",
+    "Hour 20",
+    "Hour 21",
+    "Hour 22",
+    "Hour 23"
+  ],
+  "col_labels": [
+    "Zone 1",
+    "Zone 2",
+    "Zone 3",
+    "Zone 4",
+    "Zone 5",
+    "Zone 6",
+    "Zone 7",
+    "Zone 8"
+  ]
+}
