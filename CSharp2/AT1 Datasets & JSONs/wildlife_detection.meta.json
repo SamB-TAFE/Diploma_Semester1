@@ -1,30 +1,30 @@
 {
   "file": "wildlife_detection.bin",
-  "dataset_label": "Wildlife Detection Grid",
+  "dataset_label": "Wildlife Detection Cameras & Sectors July 2025",
   "rows": 10,
   "cols": 10,
   "row_labels": [
-    "Row 1",
-    "Row 2",
-    "Row 3",
-    "Row 4",
-    "Row 5",
-    "Row 6",
-    "Row 7",
-    "Row 8",
-    "Row 9",
-    "Row 10"
+    "Sector 1",
+    "Sector 2",
+    "Sector 3",
+    "Sector 4",
+    "Sector 5",
+    "Sector 6",
+    "Sector 7",
+    "Sector 8",
+    "Sector 9",
+    "Sector 10"
   ],
-  "col_labels": [
-    "Col 1",
-    "Col 2",
-    "Col 3",
-    "Col 4",
-    "Col 5",
-    "Col 6",
-    "Col 7",
-    "Col 8",
-    "Col 9",
-    "Col 10"
-  ]
+  "column_labels": [
+    "Camera 1",
+    "Camera 2",
+    "Camera 3",
+    "Camera 4",
+    "Camera 5",
+    "Camera 6",
+    "Camera 7",
+    "Camera 8",
+    "Camera 9",
+    "Camera 10"
+  ],
 }
