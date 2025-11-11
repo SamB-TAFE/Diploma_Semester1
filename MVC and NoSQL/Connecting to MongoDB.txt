@@ -1,0 +1,5 @@
+1. Ensure Virtual Machine is on
+
+2. Open cmd window on Windows
+
+3. type in mongosh 192.168.159.128
