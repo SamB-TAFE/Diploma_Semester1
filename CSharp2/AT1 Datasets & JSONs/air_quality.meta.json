@@ -1,6 +1,6 @@
 {
   "file": "air_quality.bin",
-  "dataset_label": "Air Quality Station Readings 30/07/2025",
+  "dataset_label": "Air Quality Station Readings 30/07/25",
   "rows": 24,
   "cols": 4,
   "row_labels": [
