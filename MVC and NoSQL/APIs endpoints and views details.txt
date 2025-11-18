@@ -1,0 +1,65 @@
+APIs endpoints
+•	/API/User/Create
+•	/API/User/Auth
+•	/API/User/Update{email}
+•	/API/User/Update{password}
+•	/API/User/Update{username}
+•	/API/User/Delete
+•	/API/User/ListAll
+•	/API/User/ListDetails
+
+•	/API/Audio/Upload
+•	/API/Audio/Update
+•	/API/Audio/ListAll
+•	/API/Audio/ListDetails
+•	/API/Audio/Play
+•	/API/Audio/Delete
+
+•	/API/Analytics/List
+
+
+Home Page (No auth needed)
+ - View all Audios (API Connection)
+ - View Search Audio Results (API Connection)
+ - Search Bar {User, Audio Name, Audio Tags}
+ - List View of All Audios (on startup show all audios, otherwise show search results)
+ - view audio analytics
+ - click audio to go to Audio View Page for that audio
+ - click audio creator to go to User Projects Page with no auth
+
+
+
+Sign Up Page (No auth needed)
+ - Create New User (API connection)
+ - simple username input
+ - password input
+ - confirm password input.
+ - once confirmed, open Log In Page
+
+Log in page (No auth needed)
+ - Authorise Login in (API Connection)
+ - username and password input.
+ - once confirmed, open User Projects Page
+
+User Projects Page (Auth needed for actions, only after login, otherwise not specific user can just view)
+ - Create new audios (API connection Auth needed) (Pop up?)
+ - Update Audio Details (API connection Auth Needed) (Pop up?)
+ - Delete audio (API connection Auth Needed)
+ - List all User Audios (API Connection)
+ - View Search Audio Results (API Connection)
+ - Search User Audios [Search Bar] {Audio Name, Audio Tags}
+ - List View of All Audios (on startup show all audios, otherwise show search results)
+ - click audio to go to Audio View Page for that audio
+ - view audio analytics
+
+Audio View Page (no auth needed to listen)
+ - Read Audio model to page
+ - Load Audio and Listen
+ - big play button and audio length stream
+ - view audio analytics
+
+User Account Page (Need auth to view, if not specific user, dont show)
+ - Update User details (API Connection)
+ - Delete User (API Connection)(And all Audios with it, give are you sure pop up)
+ - View User details (API Connection)
+ - Allows change of passwords, allows email change, allows username change with inputs
