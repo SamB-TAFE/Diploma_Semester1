@@ -63,3 +63,13 @@ User Account Page (Need auth to view, if not specific user, dont show)
  - Delete User (API Connection)(And all Audios with it, give are you sure pop up)
  - View User details (API Connection)
  - Allows change of passwords, allows email change, allows username change with inputs
+
+
+
+TO DO
+
+- wire up actual audio page without mock data
+- let home page and my projects page preview songs.
+- convert duration to mins and secs on user project page
+- CSS the whole deal
+- put in search functions on home page and user projects page.
