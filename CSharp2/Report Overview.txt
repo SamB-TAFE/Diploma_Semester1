@@ -1,0 +1,139 @@
+Title : SensorShare
+
+Application Overview,
+Windows Form
+C#
+ takes binary data taken from sensors. Displays them in an easy to read format (datagrid windows forms).
+Allows for colour coded (customizable) data bounds to be displayed and calculates average of dataset.
+ Must be able to load multiple datasets and naviagte between them.
+it is "for Sensing4U that provides metrics and statistics to a wide range of companies from various sensors"
+Has a search bar to find data point in grid
+Saves data to binary +json metadata file.
+Loads data from json and binary files
+
+Iterative
+The plan is to make an MVP and then iterate to add more features, this is currently just the MVP.
+I worked on the Data Models first
+Then the Data Processor class (singleton, handles all calculations)
+Then dataview classs (handles all view based methods)
+THen data processor (middle man between the two, small parsing but mostly just a framework/linking.
+As I found needs for more data models I added them.
+then finally focused on ensuring integration worked.
+
+Requirements (verbatim from project brief)
+
+
+Main Window 
+
+Front end requirements 
+
+A data grid 
+
+Save and load menu options 
+
+A display of the average values 
+
+Inputs for the upper and lower bound of values 
+
+Icons to move between datasets 
+
+A visual indicator for acceptable, high, and low values 
+
+Back-end requirements 
+
+A sorted dataset 
+
+Calculated average of the loaded data 
+
+A binary search function 
+
+The ability to move between loaded files 
+
+Data Grid 
+
+A visual representation of the sensor data that is being read in; it will contain three (3) colours. 
+
+Green represents a sensor value in a known good range. 
+
+Red represents a sensor value that is above the known good range. 
+
+Blue represents a sensor value that is below the known good range. 
+
+Will represent the contents of a 2d array. 
+
+An indication of values that fall above, below, or within the user defined values. 
+
+File Management 
+
+Save and load binary (.bin) files, 
+
+Files must be loaded into a collection that is passed by reference, 
+
+(optional) save and load csv (.csv) files. 
+
+Functionality 
+
+The data processing class must be accomplished with a singleton class 
+
+Searching must be accomplished with a custom binary search to locate values based on a user given property of the data such as its label, 
+
+average of the currently opened set of data 
+
+Feedback System 
+
+A system for information to be given to the user when an error occurs. 
+
+A system for information to be given to the user when an action occurs. 
+
+
+Additional features implementd
+binary search finds closest match and displays if it is exact, close or no
+Datagrid loads row and column headers for more clear visual representation.
+Autocalculates standard variance to allow for default bounds to be used without user input (upper = average + sv, lower = average - sv)
+
+How to
+Search Button
+ - type search value into input
+ - press search
+ - message for if match found and what kind (exact, close or no)
+ - highlight cell on data grid if yes
+- error message if button press with no input
+
+Clear bounds Button
+ - Simply turns all cell colours back to white
+
+Set bounds button
+ if pressed with no inputs filled, displays default bounds calced by standard variance
+ if one bound input (upper or lower), displays two colours for over or under
+ if both bounds input, displays the bounds set by cell colour
+blue = below bound
+green = within
+red = above bound
+
+Prev button
+ - loads dataset previous loaded, datasets are in static order ( 0, 1, 2)
+ - so if on dataset 2 it will show 1. Essentially left shift down loaded list
+ - button disabled if only one datset loaded or on index 0, to avoid confusion
+
+next buttion
+- exactly the sam as previous button except moves right along the line
+same button disables rules (if one or at rightmost end)
+
+Save button
+open save dialogue, choose file location and name file in filename input
+json and binary will be saved to that location
+SAVES ONLY CURRENT DATASET IN VIEW
+
+Load Button
+open load dialog, choose JSON file to load from.
+json file hold binary file name that will be in the same loaction (ensure your data is set up as so before use)
+File will be loaded into dataview and appended to load data list (0,1,2,3)
+
+Average display
+automatically calculated and shown upon loading (read-only).
+
+File title display
+shown upon loading (currently only read-only as data cannot be manipulated only viewed.
+
+Commit history, theres a real git, ill worry about that, just make me a table or something wit hhwat i should include
+
