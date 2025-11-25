@@ -1,0 +1,4 @@
+builder.Services.AddOpenApi();
+
+
+app.MapOpenApi();
