@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4WVdxvwENRo=",
+  "dgSpecHash": "DVf2+EKXwcE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samue\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\samue\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

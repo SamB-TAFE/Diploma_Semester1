@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj": {}
+    "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj": {
+    "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
         "projectName": "RecordShelf_WebAPI",
-        "projectPath": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
+        "projectPath": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
         "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC\u0026NoSQL_WebApp\u002BWebAPI\\RecordShelf_WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B2E2467-0086-4D05-8E81-207D47087A9C}|RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj|c:\\users\\samue\\source\\repos\\recordshelf_webapi\\recordshelf_webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{156549F2-F82B-508A-3655-3650F65FCAD9}|RecordShelf_WebApp\\RecordShelf_WebApp.csproj|c:\\users\\samue\\documents\\github\\diploma_semester1\\mvc and nosql\\30106121_at2_mvc\u0026nosql_webapp\u002Bwebapi\\recordshelf_webapi\\recordshelf_webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{156549F2-F82B-508A-3655-3650F65FCAD9}|RecordShelf_WebApp\\RecordShelf_WebApp.csproj|solutionrelative:recordshelf_webapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B2E2467-0086-4D05-8E81-207D47087A9C}|RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj|c:\\users\\samue\\documents\\github\\diploma_semester1\\mvc and nosql\\30106121_at2_mvc\u0026nosql_webapp\u002Bwebapi\\recordshelf_webapi\\recordshelf_webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B2E2467-0086-4D05-8E81-207D47087A9C}|RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj|solutionrelative:recordshelf_webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,15 +31,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "RecordShelf_WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\Program.cs",
-              "RelativeToolTip": "RecordShelf_WebAPI\\Program.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC\u0026NoSQL_WebApp\u002BWebAPI\\RecordShelf_WebAPI\\RecordShelf_WebApp\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "RecordShelf_WebApp\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC\u0026NoSQL_WebApp\u002BWebAPI\\RecordShelf_WebAPI\\RecordShelf_WebApp\\Controllers\\UserController.cs",
+              "RelativeToolTip": "RecordShelf_WebApp\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAADwv1MAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T12:52:20.967Z",
+              "WhenOpened": "2025-12-04T07:19:43.633Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC\u0026NoSQL_WebApp\u002BWebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "RecordShelf_WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC\u0026NoSQL_WebApp\u002BWebAPI\\RecordShelf_WebAPI\\RecordShelf_WebAPI\\Program.cs",
+              "RelativeToolTip": "RecordShelf_WebAPI\\Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T12:52:20.967Z"
             }
           ]
         }

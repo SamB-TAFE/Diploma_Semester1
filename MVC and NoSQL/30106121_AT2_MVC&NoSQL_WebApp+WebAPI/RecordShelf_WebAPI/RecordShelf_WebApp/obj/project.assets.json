@@ -48,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
       "projectName": "RecordShelf_WebApp",
-      "projectPath": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
+      "projectPath": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
       "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebApp\\obj\\",
+      "outputPath": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

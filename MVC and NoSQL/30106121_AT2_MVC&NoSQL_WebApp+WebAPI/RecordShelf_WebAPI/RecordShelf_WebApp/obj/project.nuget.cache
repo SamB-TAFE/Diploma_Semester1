@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mLV9W7/hURQ=",
+  "dgSpecHash": "tN0Is8/DQnk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\samue\\source\\repos\\RecordShelf_WebAPI\\RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
+  "projectFilePath": "C:\\Users\\samue\\Documents\\GitHub\\Diploma_Semester1\\MVC and NoSQL\\30106121_AT2_MVC&NoSQL_WebApp+WebAPI\\RecordShelf_WebAPI\\RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samue\\.nuget\\packages\\taglibsharp\\2.3.0\\taglibsharp.2.3.0.nupkg.sha512"
   ],

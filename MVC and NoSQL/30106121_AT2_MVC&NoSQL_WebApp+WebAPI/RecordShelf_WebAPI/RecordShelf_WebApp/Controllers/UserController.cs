@@ -81,7 +81,7 @@ namespace RecordShelf_WebApp.Controllers
             if (user == null)
             {
                 // If we can't get the user, force re-login
-                return View(new List<AudioViewModel>());
+                return RedirectToAction("Login", "Account");
             }
 
             // Call GET api/audio/by-user/{userId}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecordShelf_WebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+754e801fea6cd1f34b3b8221979f2112e8f2c88a")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecordShelf_WebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecordShelf_WebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
