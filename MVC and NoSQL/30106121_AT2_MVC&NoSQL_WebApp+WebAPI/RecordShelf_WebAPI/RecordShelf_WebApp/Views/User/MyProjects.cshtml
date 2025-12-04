@@ -1,0 +1,165 @@
+﻿@model IEnumerable<RecordShelf_WebApp.Models.AudioDetailsViewModel>
+
+@{
+    ViewData["Title"] = "My Projects";
+    var username = ViewBag.Username as string ?? "Unknown";
+    var currentSearchTerm = (string?)ViewBag.SearchTerm ?? "";
+    var currentSearchType = (string?)ViewBag.SearchType ?? "name";
+}
+
+<h1>@username's Projects</h1>
+
+@if (TempData["UploadError"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["UploadError"]
+    </div>
+}
+
+
+@if (TempData["UploadSuccess"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["UploadSuccess"]
+    </div>
+}
+
+<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#uploadModal">
+    Upload Audio
+</button>
+
+<!-- Upload Audio Modal -->
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-controller="User" asp-action="UploadAudio" method="post" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="uploadModalLabel">Upload New Audio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="audioTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="audioTitle" name="audioTitle" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tags" class="form-label">Tags (comma separated)</label>
+                        <input type="text" class="form-control" id="tags" name="tags" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Select Audio File</label>
+                        <select class="form-control" name="filePath" required>
+                            <option value="">-- choose a demo file --</option>
+                            <option value="/audios/HOES_DEPRESSED.mp3">Hoes Depressed</option>
+                            <option value="/audios/Mumbo_Sugar.mp3">Mumbo Sugar</option>
+                            <option value="/audios/Strolling_Sloth.mp3">Strolling Sloth</option>
+                            <option value="/audios/Mystery_Song.mp3">Mystery Song</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<form asp-controller="User"
+      asp-action="MyProjects"
+      method="get"
+      class="mb-3">
+    <div class="input-group">
+        <select class="form-select" name="searchType">
+            <option value="name" selected="@(currentSearchType == "name")">Title</option>
+            <option value="tag" selected="@(currentSearchType == "tag")">Tag</option>
+        </select>
+
+        <input type="text"
+               class="form-control"
+               name="searchTerm"
+               value="@currentSearchTerm"
+               placeholder="Search my tracks..." />
+
+        <button class="btn btn-primary" type="submit">Search</button>
+
+        <a asp-controller="User"
+           asp-action="MyProjects"
+           class="btn btn-outline-secondary">
+            Clear
+        </a>
+    </div>
+</form>
+
+@if (Model == null || !Model.Any())
+{
+    <p>You haven't uploaded any tracks yet.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Tags</th>
+                <th>Duration</th>
+                <th>Plays</th>
+                <th>Likes</th>
+                <th>Listen</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var audio in Model)
+            {
+                <tr>
+                    <td>@audio.Audio.AudioTitle</td>
+                    <td>@audio.Audio.Artist</td>
+                    <td>
+                        @if (audio.Audio.Tags != null && audio.Audio.Tags.Any())
+                        {
+                            foreach (var tag in audio.Audio.Tags)
+                            {
+                                <span class="badge bg-secondary me-1">@tag</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        @if (audio.Audio.DurationSeconds > 0)
+                        {
+                            @($"{audio.Audio.DurationSeconds}s")
+                        }
+                        else
+                        {
+                            @("N/A")
+                        }
+                    </td>
+                    <td>@audio.Analytics.ListenCount</td>
+                    <td>@audio.Analytics.LikeCount</td>
+                    <td>
+                        <a asp-controller="Audio"
+                           asp-action="Listen"
+                           asp-route-id="@audio.Audio.AudioId">
+                            Listen
+                        </a>
+                    </td>
+                    <td>
+                        <form asp-controller="User" asp-action="DeleteAudio" method="post" class="d-inline">
+                            <input type="hidden" name="audioId" value="@audio.Audio.AudioId" />
+                            <button type="submit" class="btn btn-danger btn-sm"
+                                    onclick="return confirm('Delete this audio?');">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

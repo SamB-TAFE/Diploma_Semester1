@@ -1,0 +1,88 @@
+﻿@model IEnumerable<RecordShelf_WebApp.Models.AudioDetailsViewModel>
+
+@{
+    ViewData["Title"] = "Home";
+    var currentSearchTerm = (string?)ViewBag.SearchTerm ?? "";
+    var currentSearchType = (string?)ViewBag.SearchType ?? "name";
+}
+
+<h1>RecordShelf</h1>
+
+@{
+    var debugToken = Context.Session.GetString("JwtToken");
+}
+
+<form asp-controller="Home"
+      asp-action="Index"
+      method="get"
+      class="mb-3">
+    <div class="input-group">
+        <select class="form-select" name="searchType">
+            <option value="name" selected="@(currentSearchType == "name")">Title</option>
+            <option value="artist" selected="@(currentSearchType == "artist")">Artist</option>
+            <option value="tag" selected="@(currentSearchType == "tag")">Tag</option>
+        </select>
+
+        <input type="text"
+               class="form-control"
+               name="searchTerm"
+               value="@currentSearchTerm"
+               placeholder="Search tracks..." />
+
+        <button class="btn btn-primary" type="submit">Search</button>
+
+        <a asp-controller="Home"
+           asp-action="Index"
+           class="btn btn-outline-secondary">
+            Clear
+        </a>
+    </div>
+</form>
+
+
+@if (Model == null || !Model.Any())
+{
+    <p>No tracks found.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Tags</th>
+                <th>Plays</th>
+                <th>Likes</th>
+                <th>Listen</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Audio.AudioTitle</td>
+                    <td>@item.Audio.Artist</td>
+                    <td>
+                        @if (item.Audio.Tags != null && item.Audio.Tags.Any())
+                        {
+                            foreach (var tag in item.Audio.Tags)
+                            {
+                                <span class="badge bg-secondary me-1">@tag</span>
+                            }
+                        }
+                    </td>
+                    <td>@item.Analytics.ListenCount</td>
+                    <td>@item.Analytics.LikeCount</td>
+                    <td>
+                        <a asp-controller="Audio"
+                           asp-action="Listen"
+                           asp-route-id="@item.Audio.AudioId">
+                            Listen
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

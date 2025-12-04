@@ -19,56 +19,60 @@ APIs endpoints
 
 
 Home Page (No auth needed)
- - View all Audios (API Connection)
- - View Search Audio Results (API Connection)
- - Search Bar {User, Audio Name, Audio Tags}
- - List View of All Audios (on startup show all audios, otherwise show search results)
- - view audio analytics
- - click audio to go to Audio View Page for that audio
- - click audio creator to go to User Projects Page with no auth
+ - View all Audios (API Connection) DONE
+ - View Search Audio Results (API Connection) NOT DONE
+ - Search Bar {User, Audio Name, Audio Tags} NOT DONE
+ - List View of All Audios (on startup show all audios, otherwise show search results) KINDA
+ - view audio analytics NOT DONE
+ - click audio to go to Audio View Page for that audio NOT DONE
+ - click audio creator to go to User Projects Page with no auth NOT DONE
 
 
 
 Sign Up Page (No auth needed)
- - Create New User (API connection)
- - simple username input
- - password input
- - confirm password input.
- - once confirmed, open Log In Page
+ - Create New User (API connection) DONE
+ - simple username input DONE
+ - email input DONE
+ - password input DONE
+ - confirm password input. NOT DONE
+ - once confirmed, open Log In Page DONE
 
 Log in page (No auth needed)
- - Authorise Login in (API Connection)
- - username and password input.
- - once confirmed, open User Projects Page
+ - Authorise Login in (API Connection) DONE
+ - username and password input. DONE
+ - once confirmed, open User Projects Page DONE
 
 User Projects Page (Auth needed for actions, only after login, otherwise not specific user can just view)
- - Create new audios (API connection Auth needed) (Pop up?)
- - Update Audio Details (API connection Auth Needed) (Pop up?)
- - Delete audio (API connection Auth Needed)
- - List all User Audios (API Connection)
- - View Search Audio Results (API Connection)
- - Search User Audios [Search Bar] {Audio Name, Audio Tags}
- - List View of All Audios (on startup show all audios, otherwise show search results)
- - click audio to go to Audio View Page for that audio
- - view audio analytics
+ - Create new audios (API connection Auth needed) (Pop up?) DONE
+ - Update Audio Details (API connection Auth Needed) (Pop up?) NOT DONE
+ - Delete audio (API connection Auth Needed) NOT DONE
+ - List all User Audios (API Connection) DONE
+ - View Search Audio Results (API Connection) NOT DONE
+ - Search User Audios [Search Bar] {Audio Name, Audio Tags} NOT DONE
+ - List View of All Audios (on startup show all audios, otherwise show search results) NOT DONE
+ - click audio to go to Audio View Page for that audio NOT DONE
+ - view audio analytics NOT DONE
 
 Audio View Page (no auth needed to listen)
- - Read Audio model to page
- - Load Audio and Listen
- - big play button and audio length stream
- - view audio analytics
+ - Read Audio model to page DONE
+ - Load Audio and Listen DONE
+ - big play button and audio length stream MAYBE
+ - view audio analytics DONE
+ - Connect to API to get these propertie NOT DONE (using mock data rn)
 
 User Account Page (Need auth to view, if not specific user, dont show)
- - Update User details (API Connection)
- - Delete User (API Connection)(And all Audios with it, give are you sure pop up)
- - View User details (API Connection)
- - Allows change of passwords, allows email change, allows username change with inputs
+ - Update User details (API Connection) DONE
+ - Delete User (API Connection)(And all Audios with it, give are you sure pop up) NOT DONE?
+ - View User details (API Connection) DONE
+ - Allows change of passwords, allows email change, allows username change with inputs NOT COMPLETE
 
 
 
 TO DO
 
 - wire up actual audio page without mock data
+- allow chang password on user account page? (is this good idea? too complicated for student proj?)
+- Wire analytics to view with audios
 - let home page and my projects page preview songs.
 - convert duration to mins and secs on user project page
 - CSS the whole deal

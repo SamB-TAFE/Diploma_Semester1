@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-RecordShelf_WebAPI",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-RecordShelf_WebApp",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}

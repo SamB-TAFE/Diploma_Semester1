@@ -1,0 +1,607 @@
+/* ================================
+   RECORDSHELF – GLOBAL THEME
+   ================================ */
+
+:root {
+    --rs-bg: #0e1014; /* deep charcoal */
+    --rs-bg-alt: #171a21; /* slightly lighter for panels */
+    --rs-wood: #3b2516; /* warm wood tone */
+    --rs-wood-light: #6b4630;
+    --rs-accent: #e6b35c; /* brass / gold */
+    --rs-accent-soft: #f2d7a0;
+    --rs-text-main: #f5f5f5;
+    --rs-text-muted: #a6a9b3;
+    --rs-danger: #e15b64;
+    --rs-border-soft: rgba(255, 255, 255, 0.08);
+    --rs-radius-soft: 0.75rem;
+    --rs-shadow-soft: 0 18px 35px rgba(0, 0, 0, 0.45);
+    --rs-shadow-subtle: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --rs-font-display: "DM Serif Display", sans-serif;
+    --rs-font-body: "Inter", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: var(--rs-font-display);
+}
+
+body {
+    margin: 0;
+    font-family: var(--rs-font-body);
+    color: var(--rs-text-main);
+    /* subtle vertical “shelf” banding */
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.18) 0, transparent 4px, transparent 120px, rgba(0, 0, 0, 0.24) 124px );
+    background-color: var(--rs-bg);
+    background-size: 140px 100%;
+}
+
+/* If your layout has .container body wrapper, soften it */
+.container, .body-content {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+/* ================================
+   NAVBAR
+   ================================ */
+
+.navbar {
+    background: linear-gradient(135deg, #201317, var(--rs-wood));
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    box-shadow: var(--rs-shadow-subtle);
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--rs-accent-soft) !important;
+}
+
+.navbar .nav-link {
+    color: var(--rs-text-muted) !important;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 0.6rem 0.9rem;
+    position: relative;
+    transition: color 0.2s ease-out;
+}
+
+    .navbar .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0.15rem;
+        width: 0;
+        height: 2px;
+        background: var(--rs-accent);
+        transition: width 0.25s ease-out, left 0.25s ease-out;
+    }
+
+    .navbar .nav-link:hover::after,
+    .navbar .nav-link:focus::after,
+    .navbar .nav-link.active::after {
+        width: 70%;
+        left: 15%;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus,
+    .navbar .nav-link.active {
+        color: var(--rs-accent-soft) !important;
+    }
+
+/* general links */
+a {
+    color: var(--rs-accent-soft);
+    text-decoration: none;
+    transition: color 0.15s ease-out, opacity 0.15s ease-out;
+}
+
+    a:hover,
+    a:focus {
+        color: var(--rs-accent);
+        text-decoration: none;
+        opacity: 0.9;
+    }
+
+/* ================================
+   HEADINGS / TEXT
+   ================================ */
+
+h1, h2, h3, h4 {
+    color: var(--rs-accent-soft);
+}
+
+h1 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1.5rem 0 1.2rem;
+    text-align: center;
+}
+
+/* Error page uses .text-danger already */
+.text-danger {
+    color: #ff8f9c !important;
+}
+
+/* Small utility text */
+.text-muted {
+    color: var(--rs-text-muted) !important;
+}
+
+/* ================================
+   FORMS (Login / Register / Account)
+   ================================ */
+
+form {
+    margin-bottom: 1.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.form-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--rs-text-muted);
+    margin-bottom: 0.35rem;
+}
+
+.form-control {
+    background: #101218;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--rs-text-main);
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9rem;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+    transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out, background 0.15s ease-out;
+}
+
+.form-control:focus {
+        border-color: var(--rs-accent-soft);
+        background: #151822;
+        box-shadow: 0 0 0 1px rgba(230, 179, 92, 0.35);
+        outline: none;
+}
+
+
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Force visible text in ALL inputs including search */
+input.form-control,
+.input-group .form-control,
+.input-group .form-select {
+    color: var(--rs-text-main) !important;
+    -webkit-text-fill-color: var(--rs-text-main);
+}
+
+/* Validation summary */
+.validation-summary-errors,
+.text-danger ul {
+    font-size: 0.8rem;
+}
+
+/* Login/Register links under forms */
+.mt-3 a {
+    font-size: 0.85rem;
+}
+
+/* AccountSettings / alerts */
+.alert {
+    border-radius: var(--rs-radius-soft);
+    border: 1px solid var(--rs-border-soft);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--rs-text-main);
+    box-shadow: var(--rs-shadow-subtle);
+}
+
+.alert-success {
+    border-color: rgba(122, 209, 159, 0.6);
+    background: rgba(46, 125, 86, 0.2);
+}
+
+.alert-danger {
+    border-color: rgba(225, 91, 100, 0.7);
+    background: rgba(148, 36, 47, 0.35);
+}
+
+/* ================================
+   FORM CARD (Login / Register / Account)
+   ================================ */
+
+.form-card {
+    max-width: 420px;
+    margin: 3rem auto;
+    background: radial-gradient(circle at top, #262a36 0, #14161c 55%, #0b0c11 100%);
+    border-radius: 1rem;
+    padding: 2.2rem 2.4rem 2rem;
+    box-shadow: var(--rs-shadow-soft);
+    border: 1px solid var(--rs-border-soft);
+    position: relative;
+}
+
+    /* Gold accent bar on top */
+    .form-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 14%;
+        right: 14%;
+        height: 4px;
+        border-radius: 999px;
+        background: linear-gradient(to right, var(--rs-accent), var(--rs-accent-soft), var(--rs-accent));
+        opacity: 0.9;
+    }
+
+/* ================================
+   BUTTONS (global)
+   ================================ */
+
+.btn {
+    border-radius: 999px;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 0.55rem 1.35rem;
+    border-width: 1px;
+    transition: background 0.15s ease-out, color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.1s ease-out, border-color 0.15s ease-out;
+}
+
+/* main actions (Search, Log in, Sign Up, Save, Like if .btn-primary) */
+.btn-primary {
+    color: #161616;
+    background: linear-gradient(135deg, var(--rs-accent-soft), var(--rs-accent));
+    border-color: var(--rs-accent);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background: linear-gradient(135deg, var(--rs-accent), #ffde8a);
+        border-color: #ffde8a;
+        transform: translateY(-1px);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.6);
+    }
+
+.btn-outline-primary {
+    color: var(--rs-accent-soft);
+    border-color: var(--rs-accent);
+    background: transparent;
+}
+
+    .btn-outline-primary:hover,
+    .btn-outline-primary:focus {
+        color: #161616;
+        background: linear-gradient(135deg, var(--rs-accent-soft), var(--rs-accent));
+        border-color: var(--rs-accent);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+/* Clear, small ghost buttons etc. */
+.btn-outline-secondary,
+.btn-outline-light {
+    color: var(--rs-text-muted);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: transparent;
+}
+
+    .btn-outline-secondary:hover,
+    .btn-outline-light:hover {
+        color: var(--rs-accent-soft);
+        border-color: var(--rs-accent);
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+/* Delete buttons in MyProjects */
+.btn-danger {
+    background: linear-gradient(135deg, #b3424a, var(--rs-danger));
+    border-color: #b3424a;
+}
+
+    .btn-danger:hover {
+        background: linear-gradient(135deg, var(--rs-danger), #ff8f9c);
+        border-color: #ff8f9c;
+    }
+
+/* ============================
+   BRASS / MAHOGANY SEARCH BAR
+   (Home + MyProjects)
+   ============================ */
+
+.input-group {
+    background: linear-gradient(135deg, #2d1f15, #6b4630);
+    padding: 3px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: var(--rs-shadow-soft);
+}
+
+    /* inner fields */
+    .input-group > .form-select,
+    .input-group > .form-control {
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 999px;
+        border: none;
+        color: var(--rs-text-main) !important;
+        -webkit-text-fill-color: var(--rs-text-main); /* chrome autofill */
+    }
+
+        /* placeholder text */
+        .input-group > .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+/* ================================
+   TABLES – “records on a shelf”
+   (Home & MyProjects listing)
+   ================================ */
+
+.table {
+    margin-top: 0.75rem;
+    border-collapse: separate;
+    border-spacing: 0 0.55rem; /* gap between “sleeves” */
+    color: var(--rs-text-main); /* <<< make text light */
+    background-color: transparent; /* keep the dark theme */
+}
+
+    /* header row like a brass rail */
+    .table thead tr {
+        background: linear-gradient(135deg, #22171b, var(--rs-wood));
+    }
+
+    .table thead th {
+        border: none;
+        color: var(--rs-accent-soft) !important;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        padding: 0.75rem 1rem;
+    }
+
+        /* Make header + first column line up past the record spine */
+        .table thead th:first-child,
+        .table tbody td:first-child {
+            padding-left: 2rem;
+        }
+
+    .table tbody td:first-child {
+        position: relative;
+    }
+
+        .table tbody td:first-child::before {
+            content: "";
+            position: absolute;
+            left: 0.75rem;
+            top: 0.35rem;
+            bottom: 0.35rem;
+            width: 4px;
+            border-radius: 999px;
+            background: linear-gradient( to bottom, var(--rs-wood-light), var(--rs-accent), var(--rs-wood) );
+            opacity: 0.9;
+        }
+
+    /* each row = a record sleeve */
+    .table tbody tr {
+        background: radial-gradient(circle at left, #252834 0, #12141a 55%, #090a0f 100%);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+        border-radius: var(--rs-radius-soft);
+        overflow: hidden;
+        transform: translateY(0);
+        position: relative;
+        border: none;
+    }
+
+
+
+        .table tbody tr td {
+            border-top: none;
+            border-bottom: none;
+            padding: 0.7rem 1rem 0.8rem;
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+
+            /* soften row corners */
+            .table tbody tr td:first-child {
+                border-radius: var(--rs-radius-soft) 0 0 var(--rs-radius-soft);
+                font-weight: 600;
+                letter-spacing: 0.05em;
+            }
+
+            .table tbody tr td:last-child {
+                border-radius: 0 var(--rs-radius-soft) var(--rs-radius-soft) 0;
+            }
+
+        /* hover = pull record out slightly */
+        .table tbody tr:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+/* Tag badges (Home & MyProjects) using Bootstrap .badge */
+.badge {
+    border-radius: 999px;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--rs-accent-soft);
+}
+
+/* Listen link in last column */
+.table a {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+    .table a:hover {
+        border-color: var(--rs-accent);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--rs-accent);
+    }
+
+/* ================================
+   LISTEN PAGE (Listen.cshtml)
+   ================================ */
+
+.audio-page {
+    max-width: 960px;
+    margin: 2.5rem auto;
+    padding: 1.8rem;
+    border-radius: 1rem;
+    background: radial-gradient(circle at 0 0, #272b37 0, #12141a 55%, #0b0c11 100%);
+    box-shadow: var(--rs-shadow-soft);
+    border: 1px solid var(--rs-border-soft);
+}
+
+.audio-header {
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.8rem;
+}
+
+    .audio-header h1 {
+        font-size: 3.6rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.3rem;
+        line-height: 1.1;
+        text-align: left;
+    }
+
+    .audio-header p {
+        font-size: 1.25rem;
+        color: var(--rs-text-muted);
+        letter-spacing: 0.02em;
+        margin-top: 0.2rem;
+    }
+
+/* wrap around audio tag + stats */
+.audio-player {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--rs-text-muted);
+}
+
+    /* HTML5 audio element */
+    .audio-player audio {
+        width: 100%;
+        margin-top: 0.6rem;
+        filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.8));
+    }
+
+.audio-analytics,
+.audio-waveform {
+    margin-top: 1.4rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+    .audio-waveform #waveformPlaceholder {
+        margin-top: 0.6rem;
+        min-height: 80px;
+        border-radius: 0.75rem;
+        border: 1px dashed rgba(255, 255, 255, 0.18);
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+/* Like button and stats are probably standard btn / text, so
+   they’ll inherit .btn-primary / text-muted styling automatically */
+
+/* ================================
+   FOOTER
+   ================================ */
+
+.footer {
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    color: var(--rs-text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(4, 4, 8, 0.92);
+    padding: 0 1.5rem;
+}
+
+/* ================================
+   MODAL (Upload Audio in MyProjects)
+   ================================ */
+
+.modal-content {
+    background: radial-gradient(circle at top, #262a36 0, #14161c 55%, #0b0c11 100%);
+    color: var(--rs-text-main);
+    border-radius: 1rem;
+    border: 1px solid var(--rs-border-soft);
+    box-shadow: var(--rs-shadow-soft);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.modal-title {
+    color: var(--rs-accent-soft);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Make the close icon visible on dark background */
+.btn-close {
+    filter: invert(1) opacity(0.85);
+}
+
+    .btn-close:focus {
+        box-shadow: 0 0 0 0.1rem rgba(230, 179, 92, 0.6);
+    }
+
+/* Modal form fields reuse existing .form-label / .form-control styles */
+
+/* ================================
+     Make all text light
+   ================================ */
+
+input.form-control,
+textarea.form-control,
+select.form-control,
+select.form-select,
+.input-group .form-control,
+.input-group .form-select,
+.modal .form-control,
+.modal .form-select {
+    color: var(--rs-text-main) !important;
+    -webkit-text-fill-color: var(--rs-text-main);
+    background-color: #151822; /* slightly lighter than pure black */
+}
+
+/* Generic placeholder colour */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+

@@ -1,0 +1,85 @@
+﻿@model RecordShelf_WebApp.Models.AudioDetailsViewModel
+
+@{
+    ViewData["Title"] = Model.Audio.AudioTitle;
+}
+
+<div class="audio-page">
+    <header class="audio-header">
+        <h1>@Model.Audio.AudioTitle</h1>
+        <p>by @Model.Audio.Artist</p>
+    </header>
+
+    <section class="audio-player">
+        <audio controls style="width: 100%; margin-top: 1rem;">
+            <source src="@Url.Content(Model.Audio.FilePath)" type="audio/mpeg" />
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section class="audio-analytics">
+        <h3>Details</h3>
+
+        <p>
+            Plays: <span id="listenCount">@Model.Analytics.ListenCount</span>
+        </p>
+
+        @if (Model.Audio.Tags != null && Model.Audio.Tags.Any())
+        {
+            <p>Tags: @string.Join(", ", Model.Audio.Tags)</p>
+        }
+
+        <p>
+            <button id="likeButton"
+                    type="button"
+                    class="btn btn-outline-primary btn-sm"
+                    data-audio-id="@Model.Audio.AudioId">
+                ❤️ Like (<span id="likeCount">@Model.Analytics.LikeCount</span>)
+            </button>
+        </p>
+    </section>
+
+    <section class="audio-waveform">
+        <h5>Waveform (future feature)</h5>
+        <div id="waveformPlaceholder">
+            <!-- later render a waveform here -->
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const likeCountSpan = document.getElementById('likeCount');
+        const likeBtn = document.getElementById('likeButton');
+
+
+
+        likeBtn.addEventListener('click', function () {
+            fetch('@Url.Action("Like", "Audio")?id=@Model.Audio.AudioId', {
+                method: 'POST'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    console.error('Like failed with status', response.status);
+                    return response.text().then(t => { throw new Error(t); });
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    likeCountSpan.textContent = data.newLikeCount;
+                    likeBtn.disabled = true;
+                } else {
+                    console.error('Like JSON said failure', data);
+                }
+            })
+            .catch(err => {
+                console.error('Error sending like:', err);
+                alert('Error sending like');
+            });
+        });
+    });
+    </script>
+}

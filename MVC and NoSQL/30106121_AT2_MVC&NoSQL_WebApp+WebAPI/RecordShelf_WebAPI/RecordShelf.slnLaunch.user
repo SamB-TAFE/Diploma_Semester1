@@ -1,0 +1,44 @@
+[
+  {
+    "Name": "Both - Home",
+    "Projects": [
+      {
+        "Path": "RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
+        "Action": "Start",
+        "DebugTarget": "Dev-Home"
+      },
+      {
+        "Path": "RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "Both - TAFE",
+    "Projects": [
+      {
+        "Path": "RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
+        "Action": "Start",
+        "DebugTarget": "Prod-TAFE"
+      },
+      {
+        "Path": "RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "LecturerTest",
+    "Projects": [
+      {
+        "Path": "RecordShelf_WebAPI\\RecordShelf_WebAPI.csproj",
+        "Action": "Start",
+        "DebugTarget": "Dev-Home"
+      },
+      {
+        "Path": "RecordShelf_WebApp\\RecordShelf_WebApp.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

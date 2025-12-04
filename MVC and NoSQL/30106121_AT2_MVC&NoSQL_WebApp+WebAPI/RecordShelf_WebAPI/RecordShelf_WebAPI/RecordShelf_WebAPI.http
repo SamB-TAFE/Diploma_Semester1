@@ -1,0 +1,6 @@
+@RecordShelf_WebAPI_HostAddress = https://localhost:5228
+
+GET {{RecordShelf_WebAPI_HostAddress}}//
+Accept: application/json
+
+###
